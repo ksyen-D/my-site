@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }} — Мой сайт</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>О нас</h1>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/about">О нас</a>
+            <a href="/contact">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <p>Мы — небольшой проект, который показывает, как легко сделать сайт на Python и выложить его в интернет бесплатно.</p>
+        <p>Стек: Python, Flask, Gunicorn, Render.com.</p>
+    </main>
+
+    <footer>
+        <p>© 2025 Мой сайт.</p>
+    </footer>
+</body>
+</html>

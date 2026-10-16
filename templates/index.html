@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} — Мой сайт на Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>🚀 Мой сайт на Python</h1>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/about">О нас</a>
+            <a href="/contact">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Добро пожаловать!</h2>
+        <p>Этот сайт работает на Python + Flask и размещён бесплатно на Render.com.</p>
+
+        {% if message %}
+            <div class="alert">{{ message }}</div>
+        {% endif %}
+
+        <h3>Напишите нам</h3>
+        <form method="POST" action="/contact">
+            <label>Ваше имя:</label>
+            <input type="text" name="name" required>
+
+            <label>Сообщение:</label>
+            <textarea name="message" rows="5" required></textarea>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2025 Мой сайт. Сделано на Python.</p>
+    </footer>
+</body>
+</html>
